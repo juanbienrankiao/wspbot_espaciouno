@@ -5,8 +5,8 @@ const sesiones = {};
  
 // Números de WhatsApp de los barberos (sin + y con @c.us)
 const telefonosBarberos = {
-  'Luis':  '56939328016@c.us',
-  'Joako': '56951117176@c.us',
+  'Luis':  '56991872433@c.us',
+  'Joako': '56939328016@c.us',
 };
  
 let clienteWhatsapp = null;

@@ -1,3 +1,15 @@
-2026/05/25-20:17:46.124 498 Reusing MANIFEST C:\Users\antho\OneDrive\Escritorio\bot wsp\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2026/05/25-20:17:46.125 498 Recovering log #31
-2026/05/25-20:17:46.152 498 Reusing old log C:\Users\antho\OneDrive\Escritorio\bot wsp\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000031.log 
+2026/05/26-19:08:41.336 141c Reusing MANIFEST C:\Users\antho\OneDrive\Escritorio\bot wsp\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/05/26-19:08:41.337 141c Recovering log #3
+2026/05/26-19:08:41.347 141c Reusing old log C:\Users\antho\OneDrive\Escritorio\bot wsp\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000003.log 
+2026/05/26-19:09:27.815 141c Level-0 table #5: started
+2026/05/26-19:09:27.854 141c Level-0 table #5: 1059835 bytes OK
+2026/05/26-19:09:27.858 141c Delete type=0 #3
+2026/05/26-19:09:32.285 141c Level-0 table #7: started
+2026/05/26-19:09:32.308 141c Level-0 table #7: 1018845 bytes OK
+2026/05/26-19:09:32.311 141c Delete type=0 #4
+2026/05/26-19:09:32.395 141c Compacting 1@1 + 1@2 files
+2026/05/26-19:09:32.468 141c Generated table #8@1: 19318 keys, 863414 bytes
+2026/05/26-19:09:32.468 141c Compacted 1@1 + 1@2 files => 863414 bytes
+2026/05/26-19:09:32.469 141c compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/05/26-19:09:32.470 141c Delete type=2 #5
+2026/05/26-19:09:32.470 141c Delete type=2 #7

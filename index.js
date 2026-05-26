@@ -1,3 +1,4 @@
+
 require('dotenv').config();
 const { Client, LocalAuth } = require('whatsapp-web.js');
 const qrcode                = require('qrcode-terminal');
@@ -9,11 +10,13 @@ const client = new Client({
   authStrategy: new LocalAuth(),
   puppeteer: {
     headless: true,
-    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH
-      || 'C:\\Users\\antho\\.cache\\puppeteer\\chrome\\win64-148.0.7778.167\\chrome-win64\\chrome.exe',
+    executablePath: 'C:\\Users\\antho\\.cache\\puppeteer\\chrome\\win64-148.0.7778.167\\chrome-win64\\chrome.exe',
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
   },
 });
+ 
+const mensajesProcesados = new Set();
+let horaDeConexion = null;
  
 client.on('qr', (qr) => {
   console.log('\n📱 Escanea este QR con tu WhatsApp:');
@@ -22,6 +25,7 @@ client.on('qr', (qr) => {
  
 client.on('ready', () => {
   setCliente(client);
+  horaDeConexion = Math.floor(Date.now() / 1000);
   console.log('\n✅ Bot conectado y listo!\n');
 });
  
@@ -33,16 +37,24 @@ client.on('message', async (msg) => {
   if (msg.isGroupMsg || msg.from === 'status@broadcast') return;
   if (msg.fromMe) return;
  
+  // Ignorar mensajes sin texto (notificaciones internas de WhatsApp)
+  const texto = msg.body?.trim();
+  if (!texto) return;
+ 
+  // Ignorar mensajes anteriores a la conexión
+  if (horaDeConexion && msg.timestamp < horaDeConexion) return;
+ 
+  // Ignorar duplicados por ID
+  if (mensajesProcesados.has(msg.id._serialized)) return;
+  mensajesProcesados.add(msg.id._serialized);
+  if (mensajesProcesados.size > 1000) mensajesProcesados.clear();
+ 
   const phone = msg.from;
  
-  // Ignorar mensajes que vengan de los números de los barberos
+  // Ignorar mensajes de los barberos
   const telefonosBarberos = getTelefonosBarberos();
-  if (Object.values(telefonosBarberos).includes(phone)) {
-    console.log(`⏭ Mensaje ignorado de barbero [${phone}]`);
-    return;
-  }
+  if (Object.values(telefonosBarberos).includes(phone)) return;
  
-  const texto = msg.body;
   console.log(`📩 [${phone}]: ${texto}`);
  
   try {

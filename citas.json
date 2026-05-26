@@ -108,5 +108,16 @@
     "servicioNombre": "Degradado + cejas",
     "precio": 10000,
     "creadoEn": "2026-05-25T23:55:50.911Z"
+  },
+  {
+    "phone": "222643269722130@lid",
+    "fecha": "2026-06-02",
+    "hora": "10:30",
+    "barberoId": 2,
+    "barberoNombre": "Luis",
+    "servicioId": 2,
+    "servicioNombre": "Degradado",
+    "precio": 9000,
+    "creadoEn": "2026-05-26T20:40:03.973Z"
   }
 ]
