@@ -9,7 +9,8 @@ const client = new Client({
   authStrategy: new LocalAuth(),
   puppeteer: {
     headless: true,
-    executablePath: 'C:\\Users\\antho\\.cache\\puppeteer\\chrome\\win64-148.0.7778.167\\chrome-win64\\chrome.exe',
+    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH
+      || 'C:\\Users\\antho\\.cache\\puppeteer\\chrome\\win64-148.0.7778.167\\chrome-win64\\chrome.exe',
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
   },
 });
@@ -57,4 +58,3 @@ client.on('message', async (msg) => {
 });
  
 client.initialize();
- 
