@@ -1,6 +1,7 @@
-FROM node:20-bullseye-slim
 
-# Instalar Chrome y dependencias necesarias para Puppeteer
+FROM node:20-bullseye-slim
+ 
+# Instalar Chrome y dependencias
 RUN apt-get update && apt-get install -y \
     wget \
     gnupg \
@@ -28,15 +29,17 @@ RUN apt-get update && apt-get install -y \
     xdg-utils \
     --no-install-recommends \
   && rm -rf /var/lib/apt/lists/*
-
+ 
 WORKDIR /app
-
+ 
 COPY package*.json ./
-RUN npm install
-
-COPY . .
-
+ 
+# Evitar que puppeteer descargue Chrome durante npm install
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable
-
+ 
+RUN npm install
+ 
+COPY . .
+ 
 CMD ["node", "index.js"]
