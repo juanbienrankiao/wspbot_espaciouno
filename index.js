@@ -10,8 +10,12 @@ const client = new Client({
   authStrategy: new LocalAuth(),
   puppeteer: {
     headless: true,
-    executablePath: 'C:\\Users\\antho\\.cache\\puppeteer\\chrome\\win64-148.0.7778.167\\chrome-win64\\chrome.exe',
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--disable-dev-shm-usage',
+      '--disable-gpu',
+    ],
   },
 });
  
@@ -37,21 +41,17 @@ client.on('message', async (msg) => {
   if (msg.isGroupMsg || msg.from === 'status@broadcast') return;
   if (msg.fromMe) return;
  
-  // Ignorar mensajes sin texto (notificaciones internas de WhatsApp)
   const texto = msg.body?.trim();
   if (!texto) return;
  
-  // Ignorar mensajes anteriores a la conexión
   if (horaDeConexion && msg.timestamp < horaDeConexion) return;
  
-  // Ignorar duplicados por ID
   if (mensajesProcesados.has(msg.id._serialized)) return;
   mensajesProcesados.add(msg.id._serialized);
   if (mensajesProcesados.size > 1000) mensajesProcesados.clear();
  
   const phone = msg.from;
  
-  // Ignorar mensajes de los barberos
   const telefonosBarberos = getTelefonosBarberos();
   if (Object.values(telefonosBarberos).includes(phone)) return;
  
