@@ -1,15 +1,48 @@
-2026/05/26-19:08:41.336 141c Reusing MANIFEST C:\Users\antho\OneDrive\Escritorio\bot wsp\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2026/05/26-19:08:41.337 141c Recovering log #3
-2026/05/26-19:08:41.347 141c Reusing old log C:\Users\antho\OneDrive\Escritorio\bot wsp\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000003.log 
-2026/05/26-19:09:27.815 141c Level-0 table #5: started
-2026/05/26-19:09:27.854 141c Level-0 table #5: 1059835 bytes OK
-2026/05/26-19:09:27.858 141c Delete type=0 #3
-2026/05/26-19:09:32.285 141c Level-0 table #7: started
-2026/05/26-19:09:32.308 141c Level-0 table #7: 1018845 bytes OK
-2026/05/26-19:09:32.311 141c Delete type=0 #4
-2026/05/26-19:09:32.395 141c Compacting 1@1 + 1@2 files
-2026/05/26-19:09:32.468 141c Generated table #8@1: 19318 keys, 863414 bytes
-2026/05/26-19:09:32.468 141c Compacted 1@1 + 1@2 files => 863414 bytes
-2026/05/26-19:09:32.469 141c compacted to: files[ 0 0 1 0 0 0 0 ]
-2026/05/26-19:09:32.470 141c Delete type=2 #5
-2026/05/26-19:09:32.470 141c Delete type=2 #7
+2026/05/27-01:33:55.949 224c Reusing MANIFEST C:\Users\antho\OneDrive\Escritorio\bot wsp\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/05/27-01:33:55.962 224c Recovering log #6
+2026/05/27-01:33:56.023 224c Reusing old log C:\Users\antho\OneDrive\Escritorio\bot wsp\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000006.log 
+2026/05/27-01:33:57.163 2ebc Level-0 table #11: started
+2026/05/27-01:33:57.195 2ebc Level-0 table #11: 1053903 bytes OK
+2026/05/27-01:33:57.197 2ebc Delete type=0 #6
+2026/05/27-01:34:19.437 224c Compacting 1@1 + 1@2 files
+2026/05/27-01:34:19.476 224c Generated table #12@1: 18524 keys, 910325 bytes
+2026/05/27-01:34:19.476 224c Compacted 1@1 + 1@2 files => 910325 bytes
+2026/05/27-01:34:19.478 224c compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/05/27-01:34:19.479 224c Delete type=2 #8
+2026/05/27-01:34:19.479 224c Delete type=2 #11
+2026/05/27-01:34:25.239 452c Level-0 table #14: started
+2026/05/27-01:34:25.271 452c Level-0 table #14: 1073371 bytes OK
+2026/05/27-01:34:25.274 452c Delete type=0 #10
+2026/05/27-01:34:27.324 452c Level-0 table #16: started
+2026/05/27-01:34:27.377 452c Level-0 table #16: 1143607 bytes OK
+2026/05/27-01:34:27.387 452c Delete type=0 #13
+2026/05/27-01:34:27.416 452c Compacting 1@0 + 1@1 files
+2026/05/27-01:34:27.532 452c Generated table #17@0: 75973 keys, 1637681 bytes
+2026/05/27-01:34:27.532 452c Compacted 1@0 + 1@1 files => 1637681 bytes
+2026/05/27-01:34:27.533 452c compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/05/27-01:34:36.000 452c Compacting 1@1 + 1@2 files
+2026/05/27-01:34:36.102 452c Generated table #18@1: 33867 keys, 1101818 bytes
+2026/05/27-01:34:36.102 452c Compacted 1@1 + 1@2 files => 1101818 bytes
+2026/05/27-01:34:36.103 452c compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/05/27-01:34:36.103 452c Delete type=2 #14
+2026/05/27-01:34:36.103 452c Delete type=2 #16
+2026/05/27-01:34:38.376 452c Level-0 table #20: started
+2026/05/27-01:34:38.413 452c Level-0 table #20: 1137889 bytes OK
+2026/05/27-01:34:38.416 452c Delete type=2 #12
+2026/05/27-01:34:38.417 452c Delete type=0 #15
+2026/05/27-01:34:38.417 452c Delete type=2 #17
+2026/05/27-01:34:38.420 2ebc Compacting 1@1 + 1@2 files
+2026/05/27-01:34:38.485 2ebc Generated table #21@1: 32979 keys, 1561441 bytes
+2026/05/27-01:34:38.485 2ebc Compacted 1@1 + 1@2 files => 1561441 bytes
+2026/05/27-01:34:38.486 2ebc compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/05/27-01:34:38.487 2ebc Delete type=2 #18
+2026/05/27-01:34:38.487 2ebc Delete type=2 #20
+2026/05/27-01:34:58.391 224c Level-0 table #23: started
+2026/05/27-01:34:58.414 224c Level-0 table #23: 1259077 bytes OK
+2026/05/27-01:34:58.416 224c Delete type=0 #19
+2026/05/27-01:34:59.395 452c Compacting 1@1 + 1@2 files
+2026/05/27-01:34:59.470 452c Generated table #24@1: 40055 keys, 2127504 bytes
+2026/05/27-01:34:59.470 452c Compacted 1@1 + 1@2 files => 2127504 bytes
+2026/05/27-01:34:59.471 452c compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/05/27-01:34:59.471 452c Delete type=2 #21
+2026/05/27-01:34:59.471 452c Delete type=2 #23

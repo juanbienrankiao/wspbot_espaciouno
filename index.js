@@ -1,4 +1,3 @@
-
 require('dotenv').config();
 const { Client, LocalAuth } = require('whatsapp-web.js');
 const qrcode                = require('qrcode-terminal');
@@ -6,17 +5,23 @@ const { procesarMensaje, setCliente, getTelefonosBarberos } = require('./bot/flo
  
 console.log('🚀 Iniciando bot de Espacio Uno...');
  
+// Detecta si estamos en Railway o en PC local
+const enRailway = !!process.env.RAILWAY_ENVIRONMENT;
+ 
+const puppeteerConfig = enRailway
+  ? {
+      headless: true,
+      args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage', '--disable-gpu'],
+    }
+  : {
+      headless: true,
+      executablePath: 'C:\\Users\\antho\\.cache\\puppeteer\\chrome\\win64-148.0.7778.167\\chrome-win64\\chrome.exe',
+      args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    };
+ 
 const client = new Client({
   authStrategy: new LocalAuth(),
-  puppeteer: {
-    headless: true,
-    args: [
-      '--no-sandbox',
-      '--disable-setuid-sandbox',
-      '--disable-dev-shm-usage',
-      '--disable-gpu',
-    ],
-  },
+  puppeteer: puppeteerConfig,
 });
  
 const mensajesProcesados = new Set();
@@ -70,3 +75,4 @@ client.on('message', async (msg) => {
 });
  
 client.initialize();
+ 
